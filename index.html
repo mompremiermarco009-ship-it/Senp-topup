@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SENP TOPUP</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#061020;color:white;font-family:Arial}
+header{background:#091a30;padding:20px;display:flex;
+justify-content:space-between;align-items:center}
+.logo{color:#168bff;font-size:25px;font-weight:900}
+nav{display:flex;gap:9px;padding:15px;overflow:auto}
+nav span{background:#142943;padding:13px 18px;
+border-radius:30px;white-space:nowrap;font-weight:bold}
+h2{margin:30px 20px;border-left:6px solid #075cff;padding:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:15px}
+.card{background:#101f35;border:2px solid #263d5d;
+border-radius:20px;overflow:hidden;text-align:center}
+.picture{height:145px;background:linear-gradient(135deg,#061c45,#087bda);
+display:flex;align-items:center;justify-content:center;
+font-size:27px;font-weight:900}
+.card h3{font-size:15px}
+.card p{color:#b8c9df;font-size:13px}
+button{background:#075cff;color:white;border:0;
+padding:15px;border-radius:12px;font-weight:bold;width:90%;
+margin:10px 0 15px}
+.order{margin:20px;background:#142943;padding:20px;border-radius:18px}
+input,select{width:100%;padding:15px;border:0;
+border-radius:10px;margin:9px 0;font-size:15px}
+.wa{background:#20c96b}
+footer{text-align:center;padding:25px;color:#9aabc2}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🔥 SENP TOPUP</div>
+<div>🛒　☰</div>
+</header>
+
+<nav>
+<span>🏠 Tout</span>
+<span>🎮 Jwèt</span>
+<span>💎 Diamonds</span>
+<span>📞 Kontakte</span>
+</nav>
+
+<h2>Jwèt yo</h2>
+
+<div class="grid">
+<div class="card">
+<div class="picture">FREE FIRE 💎</div>
+<h3>FREE FIRE</h3>
+<p>Diamonds Top-up</p>
+<button onclick="document.getElementById('order').scrollIntoView()">RECHAJE KOUNYE A ➜</button>
+</div>
+
+<div class="card">
+<div class="picture">💎 DIAMONDS</div>
+<h3>DIAMONDS</h3>
+<p>Plizyè pake disponib</p>
+<button onclick="document.getElementById('order').scrollIntoView()">CHWAZI PAKÈ ➜</button>
+</div>
+</div>
+
+<div class="order" id="order">
+<h2>💎 PASE KÒMAND</h2>
+<input id="uid" placeholder="Antre Free Fire UID ou">
+
+<select id="pack">
+<option>100 Diamonds</option>
+<option>310 Diamonds</option>
+<option>520 Diamonds</option>
+<option>1060 Diamonds</option>
+<option>2180 Diamonds</option>
+</select>
+
+<p>Pri: Sou demann (HTG)</p>
+<button class="wa" onclick="sendOrder()">📲 PASE KÒMAND WHATSAPP</button>
+</div>
+
+<footer>
+🔥 SENP TOPUP<br>
+Free Fire Recharge Center<br>
+© 2026 SENP TOPUP
+</footer>
+
+<script>
+function sendOrder(){
+let uid=document.getElementById('uid').value.trim();
+let pack=document.getElementById('pack').value;
+if(!uid){alert('Antre UID ou anvan');return;}
+let msg='Bonjou SENP TOPUP! Mwen vle '+pack+
+'. UID mwen: '+uid+'. Tanpri voye pri a an HTG.';
+window.open('https://wa.me/50955597246?text='+
+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>
